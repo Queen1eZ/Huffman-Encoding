@@ -121,12 +121,6 @@ def populate(self, input_str):
 
 With Huffman encoding, we create a tree to encode and decode a characters. The bit sequence to represent a character is simply the path one takes through the tree.
 
-Below is an example of Huffman tree for the word “Bike”:
-
-<img width="246" alt="tree" src="https://github.com/uw-ece-590a-au24/assignment-4-huffman/blob/f6185fb2df1fae2c07e8fe0abac5b132bd51e1a4/img.png">
-
-Using the above tree, you can see how we got our earlier mapping of “00” → ‘B’, ‘01’ → ‘i’, and so on.
-
 Further, we can use this tree to go from `00011011` to the string “Bike” by tracing each bit through the tree. 
 The first bit is 0, so we start at the root and take the left branch, labeled 0. There is no character at that point, 
 so we take the next bit, and go left again. There is a character, so we now have the first character, ‘B’. We go back 
