@@ -197,7 +197,7 @@ that character and start a new traversal with the next bit in the sequence.
 # Making Binary Strings with `BitSeq`
 
 We've been talking about bits and chars and strings and such: bits make up a char, and chars make up a string.
-In the bigger picture of Huffman Encoding, we use the encoding to "pack bits". However, for this assignment, 
+In the bigger picture of Huffman Encoding, we use the encoding to "pack bits". However, for this project, 
 we're going to keep it a little simpler. 
 
 `BitSeq` is a class that will help us keep track of our 1s and 0s. In actuality, it's just a list of 
@@ -218,53 +218,6 @@ class BitSeq:
 * `BitSeq.pack_bits(str)` takes a string of "1"s and "0"s add packs them into the `bits` list. 
 * `BitSeq.get_bit(which_bit)` returns the specified bit as a "1" or "0".
 * `BitSeq.get_bits_as_string()` returns the bits put together into a single string of 1s and 0s. 
-
-You'll see in the starter code that there are some things that we'll do to try to make it easier to 
-work with the sequence; specifically, when we put the "bits" together into a string, insert spaces. 
-
-With luck, implementing `BitSeq` will be pretty straightforward, and you'll be wondering why 
-we are bothering with some of this :) 
-
-If you are looking for more of a challenge and are interested in reducing our memory footprint, 
-reach out to Adrienne for an alternate approach! 
-
-# Your Task
-
-Populate `huffman.py` by running the tests as you go.  
-You may find it helpful to define helper functions.
-
-`huffman_test.py` has some starter tests. They should pass as you start filling out your 
-code. Some of the tests do depend on specific implementation details; they **should** 
-run correctly when you write your code to the provided specification, but 
-if you do see a test that depends on a small implementation detail that is different 
-from what you used, feel free to change it. 
-
-##  Hopefully Helpful Hints
-
-* Use the defined constants
-* Write your own tests! 
-   * If the provided tests aren't helping you figure out what is not working right, write another one! 
-* If you are struggling with breaking your project down into smaller pieces, talk to an instructor/TA. Spend some time thinking about it, but feel free to ask for guidance on this part.
-* Write “print” helper functions. Again, we can’t write them all for you, because your implementation might vary. We’ve provided print functions where we could. Use those as guidance,
-and ask for help.
-* Specifically for creating the `HTree`, consider other data structures we’ve seen, and feel free to create/implement one to help with the process of creating the `HTree`.
-* Design and implement your own structs that help you solve the problem.
-* Start early. Take small steps.
-
-
-It might help to approach the assignment in this order:
-
-1. Implement `BitSeqStr`:
-   * Print a `BitSeqStr`
-   * Add bits to a `BitSeqStr`
-   * Get a single bit from a `BitSeqStr`
-2. Implement `FreqTable`:
-   * print a `FreqTable`
-   * populate the `FreqTable`
-3. Implement `HTree`
-4. Implement `LookupTable`
-5. Implement `Encoder`
-6. Implement `Decoder`
 
 ### Resources:
 
